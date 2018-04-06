@@ -1,95 +1,227 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="{!! asset('assets/img/apple-icon.png') !!}">
+    <link rel="icon" href="{!! asset('assets/img/favicon.png') !!}">
+    <title>
+        Material Dashboard by Creative Tim
+    </title>
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="{!! asset('assets/css/material-dashboard.css?v=2.0.0') !!}">
+    <!-- Documentation extras -->
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="../assets/assets-for-demo/demo.css" rel="stylesheet" />
+    <!-- iframe removal -->
+</head>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+<body class="">
+    <div class="wrapper">
+        <div class="sidebar" data-color="azure" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
+            <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+        Tip 2: you can also add an image using data-image tag
+    -->
+            <div class="logo">
+                <a href="{!! asset('') !!}" class="simple-text logo-normal">
+                    NotuS
+                </a>
+            </div>
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+                    <li class="nav-item active ">
+                        <a class="nav-link" href="../examples/dashboard.html">
+                            <i class="material-icons">dashboard</i>
+                            <p>Relatórios</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../examples/user.html">
+                            <i class="material-icons">person</i>
+                            <p>Vendedores</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../examples/table.html">
+                            <i class="material-icons">content_paste</i>
+                            <p>Produtos</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../examples/typography.html">
+                            <i class="material-icons">shopping_cart</i>
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
+                            <p>Vendas</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../examples/icons.html">
+                            <i class="material-icons">bubble_chart</i>
+                            <p>Icons</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../examples/maps.html">
+                            <i class="material-icons">location_ons</i>
+                            <p>Maps</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../examples/notifications.html">
+                            <i class="material-icons">notifications</i>
+                            <p>Notifications</p>
+                        </a>
+                    </li>
+                    <li class="nav-item active-pro">
+                        <a class="nav-link" href="../examples/upgrade.html">
+                            <i class="material-icons">unarchive</i>
+                            <p>Upgrade to PRO</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-transparent  navbar-absolute fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-wrapper">
+                        <a class="navbar-brand" href="#pablo">Material Dashboard</a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="navbar-toggler-icon icon-bar"></span>
+                        <span class="navbar-toggler-icon icon-bar"></span>
+                        <span class="navbar-toggler-icon icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        <form class="navbar-form">
+                            <div class="input-group no-border">
+                                <input type="text" value="" class="form-control" placeholder="Search...">
+                                <button type="submit" class="btn btn-white btn-round btn-just-icon">
+                                    <i class="material-icons">search</i>
+                                    <div class="ripple-container"></div>
+                                </button>
+                            </div>
+                        </form>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#pablo">
+                                    <i class="material-icons">dashboard</i>
+                                    <p>
+                                        <span class="d-lg-none d-md-block">Stats</span>
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="material-icons">notifications</i>
+                                    <span class="notification">55</span>
+                                    <p>
+                                        <span class="d-lg-none d-md-block">Some Actions</span>
+                                    </p>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Mike John responded to your email</a>
+                                    <a class="dropdown-item" href="#">You have 5 new tasks</a>
+                                    <a class="dropdown-item" href="#">You're now friend with Andrew</a>
+                                    <a class="dropdown-item" href="#">Another Notification</a>
+                                    <a class="dropdown-item" href="#">Another One</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#pablo">
+                                    <i class="material-icons">person</i>
+                                    <p>
+                                        <span class="d-lg-none d-md-block">Account</span>
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            @endif
-
+            </nav>
+            <!-- End Navbar -->
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+                <div class="container-fluid">
+                    <div class="row">
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+<!--   Core JS Files   -->
+<script src="{{ asset('/assets/js/core/jquery.min.js') }}"></script>
+<script src="../assets/js/core/popper.min.js"></script>
+<script src="../assets/js/bootstrap-material-design.js"></script>
+<script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+<!--  Charts Plugin, full documentation here: https://gionkunz.github.io/chartist-js/ -->
+<script src="../assets/js/plugins/chartist.min.js"></script>
+<!-- Library for adding dinamically elements -->
+<script src="../assets/js/plugins/arrive.min.js" type="text/javascript"></script>
+<!--  Notifications Plugin, full documentation here: http://bootstrap-notify.remabledesigns.com/    -->
+<script src="../assets/js/plugins/bootstrap-notify.js"></script>
+<!-- Material Dashboard Core initialisations of plugins and Bootstrap Material Design Library -->
+<script src="../assets/js/material-dashboard.js?v=2.0.0"></script>
+<!-- demo init -->
+<script src="../assets/js/plugins/demo.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        //init wizard
+
+        // demo.initMaterialWizard();
+
+        // Javascript method's body can be found in assets/js/demos.js
+        demo.initDashboardPageCharts();
+
+        demo.initCharts();
+
+    });
+</script>
+<!--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ -->
+
 </html>
