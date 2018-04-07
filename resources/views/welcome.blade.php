@@ -57,7 +57,6 @@
                     <li class="nav-item ">
                         <a class="nav-link" href="../examples/typography.html">
                             <i class="material-icons">shopping_cart</i>
-
                             <p>Vendas</p>
                         </a>
                     </li>
